@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
   <body>
+    <!-- script脚本会首先运行 -->
     <p>Hello World</p>
     <script>
       alert('Hello');
     </script>
     <p>Hello Hell</p>
-    <script src="./main.js"></script>
+    <!-- 外部脚本 -->
+    <script src="./main.js">
+      // 下面代码不会被运行
+      console.log("I shall not run.");
+    </script>
   </body>
 </html>
