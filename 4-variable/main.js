@@ -2,7 +2,6 @@
 let x;
 // 赋值
 x = 1;
-// 访问
 
 // 声明赋值合一
 let y = 2;
@@ -16,4 +15,6 @@ let me = '墨石',
 var word = 'Hello';
 
 // 改变变量的值
-me = 'neo42';
+me = '@neo42';
+// 访问
+console.log(me); // @neo42

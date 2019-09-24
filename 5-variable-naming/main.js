@@ -1,12 +1,16 @@
 // 数字、字母、\$、\_
 let me;
 
+// TODO
+let $mod;
+let _num;
+
 // 首字母非数字
 // 下面的代码会报错
-// let 42neo;
+// let 1person;
 
 // 允许多语言，不推荐
-let 我 = '墨石';
+let 我;
 
 // 区分大小写;
 let x = 0;
