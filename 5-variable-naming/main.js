@@ -1,3 +1,5 @@
+'use strict';
+
 // 数字、字母、\$、\_
 let me;
 
@@ -6,8 +8,7 @@ let $mod;
 let _num;
 
 // 首字母非数字
-let 1person; // 报错:保留字
-
+// let 1person; // 报错:保留字
 
 // 允许多语言，不推荐
 let 我;
