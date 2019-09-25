@@ -16,5 +16,5 @@ var word = 'Hello';
 
 // 改变变量的值
 me = '@neo42';
-// 访问
+// 取用
 console.log(me); // @neo42
