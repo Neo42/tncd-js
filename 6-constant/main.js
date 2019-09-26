@@ -1,5 +1,8 @@
 'use strict';
 
+// 声明后必须赋值
+const me; // 报错
+
 const THEME_COLOR = '#ec625f';
 
 // 不能被重新赋值
