@@ -4,8 +4,8 @@
 console.log(true || false); // true
 
 // 如果没有输入就使用24作为默认值
-let age = prompt('How old are you?') || 24;
-console.log(age);
+// let age = prompt('How old are you?') || 24;
+// console.log(age);
 
 let x;
 true || (x = 1);
@@ -21,5 +21,5 @@ zuo && console.log('WASTED');
 // 逻辑非，转换成布尔，返回相反值
 console.log(!'0');
 // !!转化布尔值
-console.log(!!'    1');
-console.log(!'0' || '');
+console.log(!!'    1'); // true
+console.log(!'0' || ''); // [empty string]
