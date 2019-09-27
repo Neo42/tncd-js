@@ -1,12 +1,9 @@
 'use strict';
 
-// while
-let i = 0;
-while (i < 3) {
-  // 0-2
-  console.log(i, '没到3');
-  i++;
+let i = 3;
+// i != 0
+while (i) {
+  // 当 i 变成 0 时，条件为 false，循环终止
+  alert(i); // 3,2,1
+  i--;
 }
-
-// 3
-console.log('到3了');
