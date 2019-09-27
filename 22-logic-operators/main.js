@@ -14,9 +14,9 @@ console.log(x); // undefined，没有被赋值
 // 逻辑与，输出第一个可以被转化成false的值
 console.log(false && true); // false
 
-// 如果作死就会死
+// 如果作死就会死，后一个运算是否能执行取决于前一个运算的结果是否为真
 let zuo = true;
-zuo && console.log('Wasted');
+zuo && console.log('WASTED');
 
 // 逻辑非，转换成布尔，返回相反值
 console.log(!'0');

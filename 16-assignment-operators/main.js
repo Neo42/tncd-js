@@ -11,5 +11,5 @@ let b;
 let c = '哇' + a + (b = a);
 console.log(a, b, c);
 
-console.log(3 % 2);
-console.log(3 ** 2);
+// 修改替换
+num += 3; // num = num + 3;

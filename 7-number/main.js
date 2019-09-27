@@ -18,7 +18,6 @@ console.log('string' / 2); // NaN，计算错误
 console.log(NaN / 2); // NaN
 
 // 所有数学运算都有结果，不会中断程序，后果有好有坏
-
 let iLoveYou = 3000;
 iLoveYou = 3e3; // 3后跟3个0
 console.log(iLoveYou);
