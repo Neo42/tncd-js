@@ -9,13 +9,8 @@ if (isBoss === true) {
   alert('信了你的邪');
 }
 
-isBoss === true ? alert('女装的？') : alert('渣渣！');
-
-let age = 24;
-let isAdult = age >= 18 ? true : false;
-console.log(isAdult);
-
-if (true) {
+// truthy, 运行
+if (1) {
   console.log('I will run.');
 }
 
