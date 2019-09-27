@@ -14,6 +14,8 @@ console.log('2' > 1); // true, '2' -> 2
 console.log(false == 0); // true, false -> 0
 console.log(null < 0); // false, null -> 0
 console.log(null <= 0); // true, null -> 0
+
+// 特例：undefined类型比较时不转换
 console.log(undefined <= 0); // false, undefined -> NaN
 console.log(undefined == 0); // false, undefined -> NaN
 
