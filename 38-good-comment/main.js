@@ -24,8 +24,8 @@ nextPrime: for (let i = 2; i <= n; i++) {
  * @param {string} str 要输出的字符串
  * @return {string} modStr 返回的字符串
  */
-function logString(str) {
-  console.log(str);
-  let modStr = 'Mod' + str;
-  return modStr;
+function logString(string) {
+  console.log(string);
+  let modedString = 'Mod' + string;
+  return modedString;
 }
