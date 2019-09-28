@@ -22,3 +22,7 @@ while (i) {
   }
   console.log(i);
 }
+
+// continue并不返回一个值，不是表达式，不能用在问号右边
+// 报错
+// (i>5)?alert(i):continue;
