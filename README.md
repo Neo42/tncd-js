@@ -1,3 +1,3 @@
-# tncd-js
+# tnjs
 
-Code example for the Tiny Javascript Series.
+Code example for the Tiny JS Series.
