@@ -7,4 +7,5 @@ console.log(`'   -1000\n'`, Number('   -1000\n')); // '   -1000\n' -1000
 console.log(true + null, Number(true + false)); // 1 1
 // - 一元加号转换数字
 console.log(+'2'); // 相当于 Number('2')
+console.log(+'+2'); // 消掉了原来的加号，相当于 Number('2')
 console.log(-'2'); // 相当于 Number('-2')
