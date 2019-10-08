@@ -16,4 +16,4 @@ function Person(name) {
 }
 
 let friend = new Person('Jarvis'); // 无参数时可以省略括号，代码风格问题
-console.log(friend); // Person { name: 'jarvis' }
+console.log(friend); // Person { name: 'jarvis'， sayHi: [λ] }

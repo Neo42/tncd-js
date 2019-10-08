@@ -3,7 +3,7 @@
 // 解释型注释
 
 // 尽量分步
-let n = prompt('Give a number.');
+let n = prompt('给我一个正整数：');
 // 设置跳转标签 nextPrime
 nextPrime: for (let i = 2; i <= n; i++) {
   for (let j = 2; j < i; j++) {
