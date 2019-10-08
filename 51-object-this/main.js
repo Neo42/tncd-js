@@ -10,17 +10,19 @@ let baby = {
   // 以下可行
   // sayAge() {
   //       let func = () => console.log(this.age);
+  //       func();
   //   }
 };
 
 baby.sayAge();
 
-const x = 1;
+x = 1;
 function logAge() {
+  // 这种情况下，严格模式里 this == undefined
   // 非严格模式下， this 指全局/window
   // console显示undefined
   // 相当与console.log({}.age)
-  // 除非提前声明 age=3, 浏览器里不能带 let 或者 const
+  // 除非提前声明 age=3, chrome浏览器里变量声明不能带 let 或者 const
   // console.log(this.age);
   console.log(this.x); // 1
 }
