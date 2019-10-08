@@ -5,7 +5,7 @@ const emptyObj = {};
 people.james = 'Lebron James';
 people[Symbol('bob')] = { name: 'Bob Smith' };
 people[Symbol('bob')] = { name: 'Bob Jones' };
-people;
+console.log(people); // {james: 'Lebron James', [Symbol(bob)]: {name: 'Bob Smith'}, [symbol(bob)]: 'Bob Jones'}
 
 // assign, Reflect.ownKeys, []access
 Object.assign(emptyObj, people);
