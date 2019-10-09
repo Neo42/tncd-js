@@ -1,5 +1,26 @@
 'use strict';
 
+// 对象属性键
+// 创建
+let id1 = Symbol('id');
+let id2 = Symbol('id');
+console.log(id1 === id2); // false
+console.log(id1); // Symbol(id)
+// console.log(id1 + ''); // Uncaught TypeError: Cannot convert a Symbol value to a string
+
+id1 = id2 = Symbol.for('id');
+console.log(id1);
+console.log(id2);
+
+// baby[id1] = baby[id2] = 2
+let baby = {
+  [id1]: 1,
+  [id2]: 2
+};
+
+console.log(baby[id1]); // 2
+console.log(baby[id2]); // 2
+
 const people = {};
 const emptyObj = {};
 people.james = 'Lebron James';
