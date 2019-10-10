@@ -1,5 +1,7 @@
 'use strict';
 
+// 字符串 <--> utf-16 编码 <--> unicode 编码位置
+
 // 代理对的两段 utf-16 编码
 console.log(`\uD83D\uDE02`);
 
@@ -25,7 +27,7 @@ for (let index = 0; index < '😂'.length; index++) {
   console.log('😂'[index]); // ��，分别输出代理对的两段
 }
 
-// unicode 正规化
+// unicode 语调符号和正规化
 console.log('S\u0307'); // Ṡ
 console.log('S\u0307\u0323'); // Ṩ
 
