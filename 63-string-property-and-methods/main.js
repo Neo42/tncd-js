@@ -45,5 +45,5 @@ console.log(
   `
 dd
      `.trim()
-); // 去除字符串两头空白字符，包括换行和制表符
+); // 'dd',去除字符串两头空白字符，包括换行和制表符
 console.log(str.repeat(2)); // I am a string.I am a string.
