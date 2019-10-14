@@ -1,7 +1,6 @@
 'use strict';
 
 let myArray = ['a', 'b', 'c'];
-
 // arr.indexOf(element, start):从起始位置 start 开始从左到右用三联等号 === 搜索元素 element，不转换元素类型
 console.log(myArray.indexOf('b', 0)); // 1
 console.log(myArray.lastIndexOf('b')); // 1，lastIndexOf 从右到左搜索
