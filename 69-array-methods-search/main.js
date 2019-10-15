@@ -16,7 +16,6 @@ console.log(myArray.lastIndexOf(NaN)); // -1，同理
 myArray = [{ id: 1 }, { id: 2 }, { id: 3 }];
 myArray.find(ele => console.log(ele)); // 输出每个元素对象
 console.log(myArray.find(ele => ele.id === 2)); // { id:2 } 返回并输出对象属性 id 为 2 的 元素
-<<<<<<< HEAD:69-array-methods-search/main.js
 console.log(
   myArray.find((ele, i, array) => {
     // 也可以不使用参数，这里直接跳过了 element
@@ -29,8 +28,3 @@ console.log(
 // 返回函数运行结果为 true 的所有元素
 myArray = [{ id: 1 }, { id: 1 }, { id: 2 }, { id: 3 }];
 console.log(myArray.filter(ele => ele.id === 1)); // [{ id:1 }, { id:1 }]
-=======
-
-// 也可以不使用参数，这里直接跳过了 element
-console.log(myArray.find((ele, i, array) => i > array.length / 2)); // { id: 3 }，返回 index > 1.5 的所有元素
->>>>>>> 13e84577427534b714ae2c8a714332069f068511:69-array-methods-searching/main.js
