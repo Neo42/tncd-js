@@ -27,7 +27,7 @@ console.log('😂'.charCodeAt(0).toString(16)); // d83d
 console.log('😂'.charCodeAt(1).toString(16)); // de02
 
 for (let index = 0; index < '😂'.length; index++) {
-  console.log('😂'[index]); // ��，分别输出代理对的两段伪字符
+  console.log('😂'[index]); // �, �，分别输出代理对的两段伪字符
 }
 
 // unicode 语调符号和正规化
