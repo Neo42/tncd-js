@@ -22,7 +22,7 @@ console.log(myArray.splice(0, 2, 'new', 'items')); // [ 'a', 'b' ]
 console.log(myArray.splice(2, 0, 'new', 'items')); // []
 console.log(myArray); // [ 'new', 'items', 'new', 'items', 'c' ]
 
-// 以上全是改变原数组的方法，此后讲的都是不改变原数组的方法
+// 以下是不改变原数组的编辑方法
 
 // str.slice(start,end)
 // 复制 [start, end) 的元素，不改变原数组，返回取出的数组
