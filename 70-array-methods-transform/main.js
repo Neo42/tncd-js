@@ -37,7 +37,7 @@ console.log(
 // str.split(seperator, length)
 // 在字符串中找出分隔符 seperator，把字符串分割成一个长度为 length 的数组，忽略超过长度的部分
 let me = 'INTP';
-// console.log(me.split()); // [ 'INTP' ]
+console.log(me.split()); // [ 'INTP' ]
 console.log(me.split('')); // [ 'I', 'N', 'T', 'P' ]，
 console.log(me.split(',')); // [ 'INTP' ]，找不到分隔符，返回原字符串
 me = 'I,N,T,P';
