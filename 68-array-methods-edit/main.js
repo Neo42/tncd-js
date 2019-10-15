@@ -31,4 +31,3 @@ console.log(myArray.slice(0, 2)); // [ 'new', 'items' ]
 // str.concat(...items)
 // 连接 str 和各个元素 ...items，不改变原数组，返回结果
 console.log(myArray.concat('yolo', 'yoyoyo')); // [ 'new', 'items', 'new', 'items', 'c', 'yolo', 'yoyoyo' ]
-console.log(myArray); // [ 'new', 'items', 'new', 'items', 'c' ]
