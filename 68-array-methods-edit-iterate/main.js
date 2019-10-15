@@ -16,7 +16,7 @@ console.log(myArray.unshift('New element')); // 前端添加一个元素,返回�
 console.log(myArray.shift()); // ’New element‘，取出并返回第一个元素
 
 // str.splice(position, length, ...items)：取出并返回以第 position 位为首的，长度为 length 的数组，并插入多个元素 ...items，改变原数组，返回取出的数组
-// 支持从末尾开始索引
+// 支持从末尾开始检索
 console.log(myArray.splice(0, 2, 'new', 'items'));
 console.log(myArray.splice(2, 0, 'new', 'items'));
 console.log(myArray);
@@ -30,7 +30,7 @@ console.log(myArray.slice(0, 2));
 console.log(myArray.concat('yolo', 'yoyoyo'));
 console.log(myArray);
 
-// forEach：对于每个元素 element 和索引数 index都用原数组 array 执行同一种操作，返回新数组，不改变原数组
+// forEach：对于每个元素 element 和当前索引数 index都用原数组 array 执行同一种操作，返回新数组，不改变原数组
 myArray.forEach((element, index, array) =>
   console.log(`${element}, ${index}, ${array}`)
 );
