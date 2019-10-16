@@ -31,3 +31,9 @@ console.log(myArray.slice(0, 2)); // [ 'new', 'items' ]
 // str.concat(...items)
 // 连接 str 和各个元素 ...items，不改变原数组，返回结果
 console.log(myArray.concat('yolo', 'yoyoyo')); // [ 'new', 'items', 'new', 'items', 'c', 'yolo', 'yoyoyo' ]
+
+// arr.reverse()
+// 返回颠倒后的数组,改变原数组
+ myArray = [1, 2, 3];
+console.log(myArray.reverse()); // [ 3, 2, 1 ]
+console.log(myArray); // [ 3, 2, 1 ]
