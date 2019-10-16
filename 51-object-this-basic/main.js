@@ -22,7 +22,7 @@ function logAge() {
   // 非严格模式下， this 指全局/window
   // console显示undefined
   // 相当与console.log({}.age)
-  // 除非提前声明 age=3, chrome浏览器里变量声明不能带 let 或者 const
+  // 除非提前声明 age = 3, chrome浏览器里变量声明不能带 let 或者 const
   // console.log(this.age);
   console.log(this.x); // 1
 }
