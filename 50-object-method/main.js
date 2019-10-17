@@ -1,9 +1,10 @@
 'use strict';
 
+// 方法：值为函数的对象属性
 let baby = {
   age: 3,
   // sayHi:function(){}
-  // sayHi:()=>{}
+  // sayHi:() => {}
   sayHi() {
     console.log('Aaaaa');
   }

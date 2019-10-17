@@ -9,8 +9,9 @@ console.log(id1); // Symbol(id)
 // console.log(id1 + ''); // Uncaught TypeError: Cannot convert a Symbol value to a string
 
 id1 = id2 = Symbol.for('id');
-console.log(id1);
-console.log(id2);
+console.log(id1); // Symbol(id)
+console.log(id2); // Symbol(id)
+console.log(Symbol.keyFor(id1)); // id，显示一个 symbol 的描述
 
 // baby[id1] = baby[id2] = 2
 let baby = {
@@ -39,3 +40,9 @@ for (let person in people) {
 }
 console.log(Object.keys(people));
 console.log(Object.getOwnPropertyNames(people));
+
+// 系统内置的symbol：Symbol 对象的属性，JavaScript中对象的内置属性键，所有对象都内置，用来存放对象具有特定结构和用途的方法
+people[Symbol.toPrimitive] = function() {};
+console.log(people);
+people[Symbol.iterator] = function() {};
+console.log(people);

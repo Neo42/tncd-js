@@ -3,9 +3,8 @@
 // 数字、字母、\$、\_
 let me;
 
-// TODO
-let $mod;
-let _num;
+let $;
+let _;
 
 // 首字母非数字
 // let 1person; // 报错:保留字

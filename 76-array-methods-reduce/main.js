@@ -40,5 +40,5 @@ console.log(
 ); // abc
 
 // 特殊情况：空数组
-// [].reduce(x => {}); // typeError，空数组 + 不提供初始值 => typeError
+// [].reduce(x => {}); // TypeError，空数组 + 不提供初始值 => TypeError
 console.log([].reduce(x => {}, 'a')); // 'a', 空数组 + 提供初始值 => 结果为初始值

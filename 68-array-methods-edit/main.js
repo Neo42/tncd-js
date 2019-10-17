@@ -27,6 +27,8 @@ console.log(myArray); // [ 'new', 'items', 'new', 'items', 'c' ]
 // str.slice(start,end)
 // 复制 [start, end) 的元素，不改变原数组，返回取出的数组
 console.log(myArray.slice(0, 2)); // [ 'new', 'items' ]
+// 原生方法不支持识别 UTF-16 高位字符
+console.log('𝒳😂𩷶'.slice(1, 3)); // ��
 
 // str.concat(...items)
 // 连接 str 和各个元素 ...items，不改变原数组，返回结果
@@ -34,6 +36,6 @@ console.log(myArray.concat('yolo', 'yoyoyo')); // [ 'new', 'items', 'new', 'item
 
 // arr.reverse()
 // 返回颠倒后的数组,改变原数组
- myArray = [1, 2, 3];
+myArray = [1, 2, 3];
 console.log(myArray.reverse()); // [ 3, 2, 1 ]
 console.log(myArray); // [ 3, 2, 1 ]
