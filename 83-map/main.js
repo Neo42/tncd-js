@@ -1,22 +1,18 @@
 'use strict';
-let aMap = new Map([[1, 'one'], [2, 'two']]);
-console.log(aMap); // Map { 1 => 'one', 2 => 'two' }
 
+// map 的键：任意类型
+let aMap = new Map([[1, 'one'], [2, 'two'], [null, 'three']]);
+console.log(aMap); // Map { 1 => 'one', 2 => 'two', null => 'three' }
+console.log(typeof aMap); // object, map 仍然是对象类型
+
+// map.set()：返回新 map，可以链式操作
 let myMap = new Map();
+myMap
+  .set('a string', "和键'a string'关联的值")
+  .set({}, '和键keyObj关联的值')
+  .set(function() {}, '和键keyFunc关联的值');
 
-// 添加键：任意类型
-myMap.set('a string', "和键'a string'关联的值");
-myMap.set({}, '和键keyObj关联的值');
-myMap.set(function() {}, '和键keyFunc关联的值');
-
-console.log(myMap.size); // 3
-
-// 读取值, 按 === 查找属性键
-console.log(myMap.get('a string')); // "和键'a string'关联的值", 'a string' === 'a string'
-console.log(myMap.get({})); // undefined, {} !== {}
-console.log(myMap.get(function() {})); // undefined, function() {} !== function() {}
-
-// 遍历时按照先前添加属性键的顺序
-for (const key of myMap) {
-  console.log(key); // [ 'a string', '和键\'a string\'关联的值' ], [ {}, '和键keyObj关联的值' ], [ [λ], '和键keyFunc关联的值' ]
-}
+// 读取值, 按 === 查找键
+console.log(myMap.get('a string')); // "和键'a string'关联的值"，因为'a string' === 'a string'
+console.log(myMap.get({})); // undefined, 因为{} !== {}
+console.log(myMap.get(function() {})); // undefined, 因为function() {} !== function() {}
