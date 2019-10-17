@@ -1,5 +1,6 @@
 'use strict';
 
+// new Map(iterable)
 // map 的键：任意类型
 let aMap = new Map([[1, 'one'], [2, 'two'], [null, 'three']]);
 console.log(aMap); // Map { 1 => 'one', 2 => 'two', null => 'three' }
