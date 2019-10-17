@@ -17,7 +17,6 @@ let myArray = ['a', 'b', 'c'];
 
 // 如果没有提供初始值 initialValue 时
 // 1.积累值 accumulator 取值为原数组的第一个元素
-// 1.积累值 accumulator 取值为原数组的第一个元素
 // 2.当前元素 currentElement 取值为数组第二个元素（从数组第二个元素执行回调函数）
 
 // 第二次以及之后的回调运行会把上一次回调函数运行的返回值作为积累值 accumulator
