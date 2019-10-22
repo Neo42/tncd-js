@@ -15,7 +15,7 @@ for (const key of Object.keys(matrix)) {
   console.log(key); // neo, morpheus, trinity
 } //
 
-// 把所有入口都转换成数组，map 一下，再
+// 对象 => 数组 => 变换 => 数组，解构赋值
 let transformedMatrix = Object.fromEntries(
   Object.entries(matrix).map(([key, value], index) => [key, index + 1])
 ); // {neo: 1, morpheus: 2, trinity: 3}

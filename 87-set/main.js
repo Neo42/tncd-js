@@ -26,6 +26,7 @@ people.forEach((value1, value2, set) => console.log(value1, value2));
 // { name: 'Mary' } { name: 'Mary' }
 
 // set.keys() 或 set.values()：返回一个包含所有值的可迭代对象
+console.log(people.keys()); // { [Iterator] }
 for (const key of people.keys()) {
   console.log(key); //  { name: 'John' }, { name: 'Pete' }, { name: 'Mary' }
 }
