@@ -22,7 +22,7 @@ let val1,
 ({ name: val1, birthYear: val2 } = Obj);
 console.log(val1, val2); // neo 1962
 
-// rest spread 如果想使用 quokka.js 测试这个功能则需要安装 @babel/plugin-proposal-object-rest-spread 这个插件
+// rest spread 如果想使用 quokka.js 测试这个功能则需要安装 @babel/plugin-proposal-object-rest-spread 这个插件，安装方法见本节视频
 let { x, y, ...rest } = { x: 10, y: 20, z: 30 };
 console.log(x); // 10
 console.log(y); // 20

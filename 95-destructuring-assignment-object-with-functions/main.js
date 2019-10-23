@@ -1,11 +1,13 @@
 'use strict';
-// user input object
+
+// 用户输入对象
 let options = {
   title: 'User title',
   tags: ['tag1', 'tag2'],
   content: 'Lorem ipsum'
 };
 
+// 函数参数默认值
 function generateArticle({
   title = 'Default title',
   tags = [],

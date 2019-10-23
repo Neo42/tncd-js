@@ -19,7 +19,6 @@
   "homepage": "https://github.com/Neo42/tncd-js#readme",
   "devDependencies": {
     "@babel/core": "^7.6.4",
-    "@babel/node": "^7.6.3",
     "@babel/preset-env": "^7.6.3",
     "babel-plugin-transform-object-rest-spread": "^6.26.0"
   }
