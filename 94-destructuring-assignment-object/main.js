@@ -7,9 +7,9 @@ console.log(name, age, gender);
 // let a, b;
 // {a, b} = { a: 1, b: 2 }; // 报错，因为 {a, b} 会被认为是一个代码块而不是对象字面量
 
-// let a, b;
-// ({ a, b } = { a: 1, b: 2 }); // 用括号规定 {a, b} 不是代码块
-// console.log(a, b); // 1 2
+let a, b;
+({ a, b } = { a: 1, b: 2 }); // 用括号规定 {a, b} 不是代码块
+console.log(a, b); // 1 2
 
 // 计算属性赋值：在解构时声明新变量
 let val1,
@@ -27,3 +27,18 @@ let { x, y, ...rest } = { x: 10, y: 20, z: 30 };
 console.log(x); // 10
 console.log(y); // 20
 console.log(rest); // { z: 30 }
+
+// 嵌套解构
+let {
+  matrix: {
+    gang: [p1, p2, p3]
+  },
+  reality: [group1, group2]
+} = {
+  matrix: {
+    gang: ['neo', 'trinity', 'morpheus']
+  },
+  reality: ['robot', 'human']
+};
+
+console.log(p1, p2, p3, group1, group2); // neo trinity morpheus robot human
