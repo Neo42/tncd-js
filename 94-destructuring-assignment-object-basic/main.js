@@ -10,3 +10,13 @@ console.log(name, age, gender);
 let a, b;
 ({ a, b } = { a: 1, b: 2 }); // 用括号规定 {a, b} 不是代码块
 console.log(a, b); // 1 2
+
+let val1,
+  val2,
+  Obj = {
+    name: 'neo',
+    birthYear: '1962'
+  };
+
+({ name: val1, birthYear: val2 } = Obj);
+console.log(val1, val2);
