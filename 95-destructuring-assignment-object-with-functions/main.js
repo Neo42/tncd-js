@@ -27,7 +27,7 @@ function generateArticle2({
 }
 generateArticle2(); // Default title  Default content
 
-// 还可以在解构时声明新变量
+// 计算属性：在解构时声明新变量
 function generateArticle3({
   title: a = 'Default title',
   tags: b = [],
