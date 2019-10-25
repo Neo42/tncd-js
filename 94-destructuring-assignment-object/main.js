@@ -2,7 +2,7 @@
 
 // 顺序不重要，变量名对应即可
 let { name, gender, age } = { name: 'Bruh', age: 24, gender: 'unknown' };
-console.log(name, age, gender);
+console.log(name, age, gender); // Bruh 24 unknown
 
 // let a, b;
 // {a, b} = { a: 1, b: 2 }; // 报错，因为 {a, b} 会被认为是一个代码块而不是对象字面量
