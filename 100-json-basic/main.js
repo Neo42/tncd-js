@@ -1,7 +1,8 @@
 'use strict';
 
-// https://json.org/json-zh.html
+// https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON
 // 一种轻量级的数据交换格式、完全独立于语言的文本格式：以 JSON 格式写成的文本
+// 独立于 Javascript
 // 键值对的集合
 // 有序列表或数组
 // 在 Javascript 中与对象对应
