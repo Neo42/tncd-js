@@ -27,6 +27,7 @@ console.log(JSON.stringify(obj));
 // 值的类型：数字，字符串，数组，对象，布尔值，null
 // 跳过:Symbol属性、值为 undefined 的属性、函数属性（方法）
 // 可以换行
+// JSON5
 obj = {
   sayHi() {
     console.log('Hi');
@@ -36,6 +37,11 @@ obj = {
   sdfds: undefined, // 跳过
   [Symbol('id')]: 123, // 跳过
   todo: [{ title: 'laundary' }, { title: 'shower' }] // 嵌套对象会被自动转化
+  // 注释也会被跳过
 };
 
 console.log(JSON.stringify(obj)); // {"age":"unknown","gender":null,"todo":[{"title":"laundary"},{"title":"shower"}]}
+
+// 支持对象、数组、字符串、数字、布尔值、和 null
+console.log(typeof JSON.stringify(1), JSON.stringify(1)); //string 1
+console.log(typeof JSON.stringify(true), JSON.stringify(true)); // string true

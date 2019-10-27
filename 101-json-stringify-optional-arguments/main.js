@@ -30,7 +30,10 @@ console.log(JSON.stringify(obj, ['todo', 'title'])); // {"todo":[{"title":"laund
 // replace也可以是一个返回要转化的属性名的回调函数
 console.log(
   JSON.stringify(obj, (key, value) => {
-    console.log(`${key}, ${value}, ${key === ''}`);
+    console.log(
+      `%c ${key}, ${value}, ${key === ''}`,
+      'background:#5c8d89;color:#f4f9f4'
+    );
     // , [object Object], true
     return key === 'gender' ? 'male' : value; // 把 gender 属性值改为 'male'
   })
