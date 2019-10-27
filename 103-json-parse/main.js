@@ -17,7 +17,7 @@ let data = `{"person":{"who":"me"},"location":"Beijing","todo":["code","record",
 let obj = JSON.parse(data);
 console.log(obj.time); // 2017-01-01T00:00:00.000Z
 
-// reviver：转换器
+// reviver：转换器，先正常转换，之后对每个键和值运行转换器函数，最后返回每个新键和新值
 obj = JSON.parse(data, (key, value) => {
   if (key === 'time') return new Date(value);
   return value;
