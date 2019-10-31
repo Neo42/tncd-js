@@ -19,3 +19,9 @@ console.log(pow(2, 3));
 // 4. 内层函数结束执行，弹出内层函数的执行环境，外层函数恢复执行
 
 // https://tc39.es/ecma262/#sec-execution-contexts
+
+// 执行上下文
+// 外层词法环境——LexicalEnvironment
+// 内层词法环境——VariableEnvironment
+//  - 环境记录 - 保存全局变量、函数
+//  - 对 LexicalEnvironment 的引用 [[environment]]：null
