@@ -17,10 +17,9 @@ function f() {
 // 所以 JavaScript 的作用域机制被称为“词法作用域”(相对于某些语言采用的动态作用域)
 
 // 全局作用域
-var globalVar = 'globalVar'; // var 全局作用域
-// var foo; 声明
+let globalVar = 'globalVar'; // var 全局作用域
+// let foo; 声明
 // foo = 'bar'赋值(绑定)
-// let scriptVar = 'scriptVar'; let 脚本作用域
 
 // 函数作用域：函数声明和表达式作用域机制一样
 function declaredFunc() {
@@ -28,7 +27,7 @@ function declaredFunc() {
   console.log('declaredFunc ran.');
 }
 
-var arrowFunc = () => {
+let arrowFunc = () => {
   let funcVar = 'funcVar';
   console.log('arrowFunc ran.');
 };
