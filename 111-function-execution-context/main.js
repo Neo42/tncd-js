@@ -17,13 +17,13 @@ say(name);
 // 创建阶段（脚本创建后立即开始）：
 // 1. 创建全局执行环境（全局对象、对应指向的 this、隐性指向 null 的引用）
 // 2. 找到变量 name、github 和函数 say 的声明，开设内存、记录声明
-// 3. 把变量的值设为 undefined
+// 3. 跳过 let 声明，保持未初始化状态，如果是 var 声明则初始化为 undefined
 
-// 执行阶段（从创建阶段记录完最后一个声明之后开始）
+// 执行阶段（从脚本运行开始）
 // 1. 从上到下分别把 name、github 赋值成 '墨石'、'neo42'
 // 2. 引擎跑到第 15 行看到了函数的调用，于是在全局执行上下文之上又创建一个函数 say 的执行上下文（包括一个 arguments 对象、指向函数对象的 this 关键字以及对全局执行环境的隐性引用）（函数执行环境被摞到执行环境栈顶层）
 // 3. say 函数执行上下文中又会经过代码创建、代码执行两个阶段，先以创建出以参数形式声明的局部变量 word，之后把全局变量 name 的值赋给函数的局部变量 word，console.log执行，函数执行环境的执行阶段结束
 // 4. 函数执行环境被弹出执行环境栈，全局执行环境的执行阶段结束
 
-// https://tylermcginnis.com/javascript-visualizer/
+// https://tylermcginnis.com/javascript-visualizer/ (只适用于es5)
 // http://davidshariff.com/blog/what-is-the-execution-context-in-javascript/
