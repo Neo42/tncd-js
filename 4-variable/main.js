@@ -11,7 +11,7 @@ let me = '墨石',
   age = 24,
   message = 'Hello';
 
-// 老式var声明
+// 老式var声明，容易出错
 var word = 'Hello';
 
 // 改变变量的值
