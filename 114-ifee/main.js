@@ -1,6 +1,6 @@
 'use strict';
 
-(function iife() {
+(function() {
   let innerVar = 'I am a variable';
   console.log(innerVar); // I am a variable
 })();
