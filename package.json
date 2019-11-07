@@ -16,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/Neo42/tnjs/issues"
   },
-  "homepage": "https://github.com/Neo42/tnjs#readme"
+  "homepage": "https://github.com/Neo42/tnjs#readme",
+  "dependencies": {}
 }
