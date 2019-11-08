@@ -12,11 +12,11 @@ sayHi.call(user); // this = John
 sayHi.call(admin); // this = Admin
 
 let worker = {
-  anotherMethod() {
-    return 1;
+  complete() {
+    return '✅';
   },
   heavyTask(input) {
-    return `Task complete: ${input}`;
+    return `${input} ${this.complete()}`;
   }
 };
 
