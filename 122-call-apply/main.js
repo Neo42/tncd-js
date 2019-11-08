@@ -33,5 +33,5 @@ function taskEnhancer(func) {
 }
 
 worker.heavyTask = taskEnhancer(worker.heavyTask);
-console.log(worker.heavyTask('Lose 5kg'));
-console.log(worker.heavyTask('Lose 5kg'));
+console.log(worker.heavyTask('Losing 5kg'));
+console.log(worker.heavyTask('Losing 5kg'));
