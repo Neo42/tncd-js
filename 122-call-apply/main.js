@@ -1,31 +1,37 @@
 'use strict';
 
-function slow(x) {
-  // 需要记住的结果
-  console.log(`Called with ${x}`);
-  return x;
+function sayHi() {
+  console.log(this.name);
 }
 
-function cachingDecorator(func) {
+let user = { name: 'John' };
+let admin = { name: 'Admin' };
+
+// use call to pass different objects as "this"
+sayHi.call(user); // this = John
+sayHi.call(admin); // this = Admin
+
+let worker = {
+  anotherMethod() {
+    return 1;
+  },
+  heavyTask(input) {
+    return `Task complete: ${input}`;
+  }
+};
+
+function taskEnhancer(func) {
   let cache = new Map();
-
-  return function(x) {
-    if (cache.has(x)) {
-      // if there's such key in cache
-      return cache.get(x); // read the result from it
+  return function(key) {
+    if (!cache.has(key)) {
+      let result = func.call(this, key);
+      cache.set(key, result);
+      return result;
     }
-
-    let result = func(x); // otherwise call func
-
-    cache.set(x, result); // and cache (remember) the result
-    return result;
+    return 'Cached! ' + cache.get(key);
   };
 }
 
-slow = cachingDecorator(slow); // 变形后的函数
-
-console.log(slow(1)); // 返回结果前会先缓存
-console.log('Again: ' + slow(1)); // 返回缓存的结果
-
-console.log(slow(2)); // 缓存后返回结果
-console.log('Again: ' + slow(2)); // 返回缓存的结果
+worker.heavyTask = taskEnhancer(worker.heavyTask);
+console.log(worker.heavyTask('Lose 5kg'));
+console.log(worker.heavyTask('Lose 5kg'));
