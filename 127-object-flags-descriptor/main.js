@@ -45,11 +45,11 @@ console.log(JSON.stringify(descriptor, null, 2));
 // 不能更改 configurable 和 enumerable
 // 不能更改 get 和 set 方法
 
-person = { name: 1, surname: 2 };
-Object.defineProperties(person, {
-  name: { value: 'Agent', writable: false },
-  surname: { value: 'Smith', writable: false }
+let hero = { name: '', culture: '' };
+Object.defineProperties(hero, {
+  name: { value: 'Percival', writable: false },
+  culture: { value: 'England', writable: false }
   // ...
 });
 
-console.log(person);
+console.log(hero);
