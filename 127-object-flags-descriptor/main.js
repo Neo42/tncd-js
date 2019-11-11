@@ -49,7 +49,6 @@ let hero = { name: '', culture: '' };
 Object.defineProperties(hero, {
   name: { value: 'Percival', writable: false },
   culture: { value: 'England', writable: false }
-  // ...
 });
 
 console.log(hero);
