@@ -24,6 +24,8 @@ Object.defineProperty(person, 'age', {
   enumerable: false
 });
 
+console.log(person);
+
 for (const key in person) {
   // age 属性不会出现
   console.log(key); // name
@@ -40,4 +42,14 @@ console.log(JSON.stringify(descriptor, null, 2));
 
 // configurable: false
 // 不能把 writable 从 false 改为 true
-// 不能修改 configurable 和 enumerable
+// 不能更改 configurable 和 enumerable
+// 不能更改 get 和 set 方法
+
+person = { name: 1, surname: 2 };
+Object.defineProperties(person, {
+  name: { value: 'Agent', writable: false },
+  surname: { value: 'Smith', writable: false }
+  // ...
+});
+
+console.log(person);
