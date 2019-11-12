@@ -12,7 +12,6 @@ console.log(Autobot.prototype.constructor === Autobot); // true
 let optimus = new Autobot('Peterbilt 379', ['red', 'blue']);
 console.log(optimus.__proto__); // { constructor: Autobot }
 console.log(optimus.constructor === Autobot); // true
-console.log(optimus);
 
 // 构造函数的 prototype === 对象实例的 __proto__
 Autobot.prototype = { planet: 'Cybertron' };
