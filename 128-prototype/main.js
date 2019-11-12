@@ -7,6 +7,9 @@ let android = {
     console.log(
       "Reality is that which, when you stop believing in it, doesn't go away."
     );
+  },
+  sleep() {
+    return this.dream;
   }
 };
 
@@ -28,3 +31,7 @@ author.say(); // A man is an angel that has gone deranged.
 let creature = { die: true };
 android.__proto__ = creature;
 console.log(android.die); // true
+
+// this 始终是方法的调用者
+author.dream = 'Android';
+console.log(author.sleep()); // Android
