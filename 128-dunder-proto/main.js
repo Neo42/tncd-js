@@ -35,3 +35,13 @@ console.log(android.die); // true
 // this 始终是方法的调用者
 author.dream = 'Android';
 console.log(author.sleep()); // Android
+
+console.log(author); // { name: 'Philip K Dick', say: [λ], dream: 'Android' }
+console.log(author.__proto__); // { dream: 'electronic sheep', say: [λ: say], sleep: [λ: sleep] }
+
+for (const key in author) {
+  // console.log(key); // name, say, dream, sleep, die
+  if (author.hasOwnProperty(key)) {
+    console.log(key); // name, say, dream
+  }
+}
