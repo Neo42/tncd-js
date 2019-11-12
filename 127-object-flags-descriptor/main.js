@@ -41,3 +41,4 @@ console.log(JSON.stringify(descriptor, null, 2));
 // configurable: false
 // 不能把 writable 从 false 改为 true
 // 不能修改 configurable 和 enumerable
+// 不能修改 get 和 set 方法
