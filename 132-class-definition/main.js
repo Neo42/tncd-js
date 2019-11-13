@@ -1,13 +1,15 @@
 'use strict';
 
+// 类声明不会被提升
+
 class Servant {
-	constructor(name, weapon) {
-		this.name = name;
-		this.weapon = weapon;
-	}
-	attack() {
-		console.log(this.weapon + '!!!');
-	}
+  constructor(name, weapon) {
+    this.name = name;
+    this.weapon = weapon;
+  }
+  attack() {
+    console.log(this.weapon + '!!!');
+  }
 }
 
 // function Servant(name, weapon) {
@@ -46,5 +48,5 @@ console.log(saberProto === Servant.prototype); // true
 
 // class 方法不可枚举
 for (const key in saber) {
-	console.log(key); // name, weapon
+  console.log(key); // name, weapon
 }

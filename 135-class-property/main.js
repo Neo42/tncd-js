@@ -4,6 +4,7 @@
 
 class User {
   name = 'Anonymous';
+  weapon = 'Sword';
   sayHi() {
     alert(`Hello, ${this.name}!`);
   }
