@@ -1,19 +1,41 @@
 'use strict';
 
-class User {
-	constructor(name) {
-		this.name = name;
-	}
-	say() {
-		console.log(this.name);
-	}
+// class Servant {
+// 	constructor(name,weapon) {
+// 		this.name = name;
+// 		this.weapon = weapon;
+// 	}
+// 	attack() {
+// 		console.log(this.weapon);
+// 	}
+// }
+
+// // let saber = new Servant;
+// // let saber = new Servant();
+// console.log(saber); // Servant { name:undefined, weapon:undefined }
+// user = new User('Saber','Excalibur');
+// console.log(saber); // User { name: 'Saber', weapon:'Excalibur' }
+// saber.attack(); // Excalibur
+
+// console.log(typeof Servant); // function
+
+function Servant(name, weapon) {
+	this.name = name;
+	this.weapon = weapon;
 }
 
-// let user = new User;
-let user = new User();
-console.log(user); // User { name:undefined }
-user = new User('neo42');
-console.log(user); // User { name: 'neo42' }
-user.say(); // neo42
+Servant.prototype = {
+	constructor: Servant,
+	attack() {
+		console.log(this.weapon);
+	}
+};
 
-console.log(typeof User); // function
+console.log(Servant.prototype); // Servant { constructor: [λ: Servant], attack: [λ: attack] }
+
+let user = new Servant('Saber', 'Excalibur');
+user.attack();
+
+let saberProto = Object.getPrototypeOf(user);
+console.log(saberProto); // Servant { constructor: [λ: Servant], attack: [λ: attack] }
+console.log(saberProto === Servant.prototype); // true
