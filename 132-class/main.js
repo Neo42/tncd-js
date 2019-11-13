@@ -1,6 +1,6 @@
 'use strict';
 
-class MyClass {
+class User {
 	constructor(name) {
 		this.name = name;
 	}
@@ -9,9 +9,11 @@ class MyClass {
 	}
 }
 
-// let user = new MyClass;
-let user = new MyClass();
-console.log(user); // MyClass { name:undefined }
-user = new MyClass('neo42');
-console.log(user); // MyClass { name: 'neo42' }
+// let user = new User;
+let user = new User();
+console.log(user); // User { name:undefined }
+user = new User('neo42');
+console.log(user); // User { name: 'neo42' }
 user.say(); // neo42
+
+console.log(typeof User); // function
