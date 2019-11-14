@@ -1,4 +1,7 @@
 'use strict';
+
+// https://2ality.com/2011/11/super-references.html
+
 let Servant = {
 	name: 'Servant',
 	weapon: undefined,
@@ -50,7 +53,7 @@ KingArthur = {
 	weapon: 'Excalibur',
 	doSomething() {
 		// longEar.eat.[[HomeObject]] == longEar
-		super.doSomething();
+		console.log(super.doSomething);
 	}
 };
 
