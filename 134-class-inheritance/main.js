@@ -16,7 +16,6 @@ class Saber extends Servant {
 		super(...args);
 		this.master = master;
 	}
-
 	say() {
 		console.log(`${this.master}! 結婚しよ!`);
 	}
