@@ -1,28 +1,28 @@
 'use strict';
 
 let Servant = class {
-	constructor(name, weapon) {
-		this.name = name;
-		this.weapon = weapon;
-	}
-	attack() {
-		console.log(this.weapon + '!!!');
-	}
+  constructor(name, weapon) {
+    this.name = name;
+    this.weapon = weapon;
+  }
+  attack() {
+    console.log(this.weapon + '!!!');
+  }
 };
 
 let saber = new Servant('Saber', 'Excalibur');
 saber.attack();
 
 let makeServant = function() {
-	return class {
-		constructor(name, weapon) {
-			this.name = name;
-			this.weapon = weapon;
-		}
-		attack() {
-			console.log(this.weapon + '!!!');
-		}
-	};
+  return class {
+    constructor(name, weapon) {
+      this.name = name;
+      this.weapon = weapon;
+    }
+    attack() {
+      console.log(this.weapon + '!!!');
+    }
+  };
 };
 
 Servant = makeServant();
