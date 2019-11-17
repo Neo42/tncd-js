@@ -2,8 +2,8 @@
 
 // 类属性：实验性功能
 
-class User {
-  name = 'Anonymous';
+class Saber {
+  name = 'Saber';
   weapon = 'Sword';
 
   sayHi() {
@@ -11,5 +11,5 @@ class User {
   }
 }
 
-let me = new User();
-console.log(me.name); // Anonymous
+let myKing = new Saber();
+console.log(myKing.name); // Saber

@@ -20,5 +20,5 @@ class Servant {
   }
 }
 
-const saber = new Servant('Saber', 'Excalibur');
-console.log(saber.name); // Saber
+const myKing = new Servant('Saber', 'Excalibur');
+console.log(myKing.name); // Saber

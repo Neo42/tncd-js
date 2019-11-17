@@ -1,6 +1,6 @@
 'use strict';
 
-let thing;
+let thing = 'whatever';
 
 class Servant {
   constructor(name, weapon) {
