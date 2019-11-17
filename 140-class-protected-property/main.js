@@ -26,5 +26,5 @@ class Saber {
 
 let myKing = new Saber('biscuit');
 myKing.say(); // Thanks for the biscuit. I am now 60% full.
-myKing.fullness = 100; // Cannot set property fullness，只读
-myKing.say(); // Thanks for the biscuit. I am now 100% full.
+// myKing.fullness = 100; // Cannot set property fullness，只读
+// myKing.say(); // Thanks for the biscuit. I am now 100% full.
