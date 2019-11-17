@@ -1,28 +1,28 @@
 'use strict';
 
 class Servant {
-	constructor(name, weapon) {
-		this.name = name;
-		this.weapon = weapon;
-	}
-	attack() {
-		console.log(this.weapon + '!!!');
-	}
+  constructor(name, weapon) {
+    this.name = name;
+    this.weapon = weapon;
+  }
+  attack() {
+    console.log(this.weapon + '!!!');
+  }
 }
 
 class Saber extends Servant {
-	// 如果没有附加属性要添加则可以完全省略 constructor
-	constructor(master, ...args) {
-		super(...args);
-		this.master = master;
-	}
-	say() {
-		console.log(`${this.master}! 結婚しよ!`);
-	}
-	attack() {
-		super.attack();
-		console.log('アホ毛!!!');
-	}
+  // 如果没有附加属性要添加则可以完全省略 constructor
+  constructor(master, ...args) {
+    super(...args);
+    this.master = master;
+  }
+  say() {
+    console.log(`${this.master}、 結婚しよ!`);
+  }
+  attack() {
+    super.attack();
+    console.log('とアホ毛!!!');
+  }
 }
 
 console.log(Saber); // [λ: Saber]
