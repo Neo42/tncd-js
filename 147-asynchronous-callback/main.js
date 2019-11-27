@@ -1,8 +1,8 @@
 function launch() {
-  let url = json.responseJSON.links.flickr_images[4];
+  let url = json.responseJSON.links.flickr_images[5];
   let img = document.createElement('img');
   img.src = url;
-  img.width = 600;
+  img.height = 800;
   setTimeout(() => document.querySelector('body').append(img), 3000);
 }
 
