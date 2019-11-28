@@ -1,9 +1,9 @@
 function launch() {
-  let url = json.responseJSON.links.flickr_images[5];
+  let url = json.responseJSON.links.flickr_images[3];
   let img = document.createElement('img');
   img.src = url;
-  img.height = 800;
-  setTimeout(() => document.querySelector('body').append(img), 3000);
+  img.height = 900;
+  setTimeout(() => document.querySelector('#img').append(img), 3000);
 }
 
 function showError() {
