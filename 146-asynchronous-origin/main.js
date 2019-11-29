@@ -1,3 +1,4 @@
+// https://developer.mozilla.org/zh-CN/docs/Glossary/%E5%BC%82%E6%AD%A5
 // Computer science (In computer science, especially parallel computing, synchronization refers to the coordination of simultaneous threads or processes to complete a task with correct runtime order and no unexpected race conditions.)
 // https://en.wikipedia.org/wiki/Synchronization
 // https://en.wikipedia.org/wiki/Synchronization_(computer_science)
