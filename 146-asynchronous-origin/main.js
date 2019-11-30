@@ -1,3 +1,6 @@
+// https://en.wikipedia.org/wiki/Synchronization_(computer_science)
+// https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)
+
 // 过程（线程）同步：
 // 1.多个进程在某个点汇合
 // 2.按照一定的顺序执行（依赖关系、连接、按照同一个序列、在同一一条路线上执行）✅
