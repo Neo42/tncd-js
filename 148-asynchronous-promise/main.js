@@ -11,6 +11,7 @@ function showError() {
 }
 
 function getPokemon(id) {
+  /*return new Promise((resolve, reject) => {})*/
   return new Promise((onThen, onCatch) => {
     $.getJSON({
       url: `https://pokeapi.co/api/v2/pokemon/${id}/`,
