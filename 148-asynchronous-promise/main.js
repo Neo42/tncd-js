@@ -6,8 +6,8 @@ function showPokemon(json) {
   document.body.appendChild(img);
 }
 
-function showError() {
-  console.log(`Request failed.`);
+function showError(e) {
+  console.log(`Request failed ${e}`);
 }
 
 function getPokemon(id) {
@@ -21,6 +21,6 @@ function getPokemon(id) {
   });
 }
 
-Promise.all([getPokemon(1), getPokemon(7), getPokemon(25)]).then(pokemons =>
-  pokemons.forEach(showPokemon)
-);
+Promise.all([getPokemon(1), getPokemon(7), getPokemon(25)])
+  .then(pokemons => pokemons.forEach(showPokemon))
+  .catch(showError);
