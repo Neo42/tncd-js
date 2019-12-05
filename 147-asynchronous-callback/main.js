@@ -1,9 +1,7 @@
 function showPokemon(json, id) {
   let imgUrl = json.responseJSON.sprites.front_default;
   let img = document.createElement('img');
-  img.height = 200;
   img.src = imgUrl;
-  let name = document.createElement('p');
   document.body.appendChild(img);
 }
 
