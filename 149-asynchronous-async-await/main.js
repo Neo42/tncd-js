@@ -13,19 +13,18 @@ function showError(e) {
 async function getPokemon(id) {
   /*return new Promise((resolve, reject) => {})*/
   try {
-    let pokemon = await new Promise((resolve, reject) => {
+    let pokemon = await new Promise(resolve => {
       $.getJSON({
         url: `https://pokeapi.co/api/v2/pokemon/${id}/`,
-        success: resolve,
-        error: reject
+        success: resolve
       });
     });
-    showPokemon(pokemon);
+    return pokemon;
   } catch (e) {
     showError(e);
   }
 }
 
-getPokemon(1);
+console.log(getPokemon(1));
 getPokemon(7);
 getPokemon(25);
