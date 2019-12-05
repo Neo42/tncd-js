@@ -1,9 +1,10 @@
-function launch() {
-  let url = json.responseJSON.links.flickr_images[3];
+function showPokemon(json, id) {
+  let imgUrl = json.responseJSON.sprites.front_default;
   let img = document.createElement('img');
-  img.src = url;
-  img.height = 900;
-  setTimeout(() => document.querySelector('#img').append(img), 3000);
+  img.height = 200;
+  img.src = imgUrl;
+  let name = document.createElement('p');
+  document.body.appendChild(img);
 }
 
 function showError() {
@@ -11,16 +12,23 @@ function showError() {
 }
 
 let json = $.getJSON({
-  url: `https://api.spacexdata.com/v3/launches/67`,
-  success: launch,
+  url: `https://pokeapi.co/api/v2/pokemon/1/`,
+  success: () => {
+    showPokemon(json, 0);
+    let json2 = $.getJSON({
+      url: `https://pokeapi.co/api/v2/pokemon/7/`,
+      success: () => {
+        showPokemon(json2, 1);
+        let json3 = $.getJSON({
+          url: `https://pokeapi.co/api/v2/pokemon/25/`,
+          success: () => {
+            showPokemon(json3, 2);
+          },
+          error: showError
+        });
+      },
+      error: showError
+    });
+  },
   error: showError
 });
-
-let i = 4;
-let interval = setInterval(() => {
-  i -= 1;
-  console.log(i);
-  if (i === 0) {
-    clearInterval(interval);
-  }
-}, 1000);

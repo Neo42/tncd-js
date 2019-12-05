@@ -1,43 +1,25 @@
-let charged = true;
-let car = {
-  control: new Promise((go, stop) => {
-    if (charged) {
-      go();
-    } else {
-      stop();
-    }
-  }),
+function showPokemon(json) {
+  let imgUrl = json.sprites.front_default;
+  let img = document.createElement('img');
+  img.height = 200;
+  img.src = imgUrl;
+  document.body.appendChild(img);
+}
 
-  goFoward(distance) {
-    console.log(`Car moved forward for ${distance}.`);
-  },
+function showError() {
+  console.log(`Request failed.`);
+}
 
-  goLeft(distance) {
-    console.log(`Car moved left for ${distance}.`);
-  },
+function getPokemon(id) {
+  return new Promise((onThen, onCatch) => {
+    $.getJSON({
+      url: `https://pokeapi.co/api/v2/pokemon/${id}/`,
+      success: onThen,
+      error: onCatch
+    });
+  });
+}
 
-  batteryDead() {
-    console.log(`Battery is dead.`);
-    charged = false;
-  },
-  breakDown() {
-    console.log(`Car broke down`);
-  }
-};
-
-car.control
-  .then(() =>
-    setTimeout(() => {
-      car.goFoward(`500 meters`);
-    }, 1000)
-  )
-  .then(() =>
-    setTimeout(() => {
-      car.goLeft(`500 meters`);
-    }, 2000)
-  )
-  .then(() =>
-    setTimeout(() => {
-      car.batteryDead();
-    }, 3000)
-  );
+Promise.all([getPokemon(1), getPokemon(7), getPokemon(25)]).then(pokemons =>
+  pokemons.forEach(showPokemon)
+);
