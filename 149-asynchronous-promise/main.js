@@ -1,5 +1,5 @@
-function showPokemon(json) {
-  let imgUrl = json.sprites.front_default;
+function showPokemon(res) {
+  let imgUrl = res.sprites.front_default;
   let img = document.createElement('img');
   img.height = 300;
   img.src = imgUrl;
@@ -20,7 +20,3 @@ function getPokemon(id) {
     });
   });
 }
-
-Promise.all([getPokemon(1), getPokemon(7), getPokemon(25)])
-  .then(pokemons => pokemons.forEach(showPokemon))
-  .catch(showError);
