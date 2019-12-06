@@ -19,7 +19,11 @@ async function getPokemon(id) {
         success: resolve
       });
     });
-    showPokemon(pokemon);
+    {
+      // 相当于 resolve
+      console.log(pokemon);
+      showPokemon(pokemon);
+    }
   } catch (e) {
     showError(e);
   }
