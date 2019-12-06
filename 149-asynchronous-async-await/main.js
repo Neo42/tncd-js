@@ -19,12 +19,12 @@ async function getPokemon(id) {
         success: resolve
       });
     });
-    return pokemon;
+    showPokemon(pokemon);
   } catch (e) {
     showError(e);
   }
 }
 
-console.log(getPokemon(1));
+getPokemon(1);
 getPokemon(7);
 getPokemon(25);
