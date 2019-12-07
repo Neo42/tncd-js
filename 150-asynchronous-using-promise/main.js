@@ -24,3 +24,7 @@ function getPokemon(id) {
 Promise.all([getPokemon(1), getPokemon(7), getPokemon(25)])
   .then(pokemons => pokemons.forEach(showPokemon))
   .catch(showError);
+
+Promise.race([getPokemon(1), getPokemon(7), getPokemon(25)])
+  .then(showPokemon)
+  .catch(showError);
