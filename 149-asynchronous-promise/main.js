@@ -7,7 +7,7 @@ function showPokemon(res) {
 }
 
 function showError(e) {
-  console.log(`Request failed ${e}`);
+  console.log(`Request failed: ${e}`);
 }
 
 function getPokemon(id) {

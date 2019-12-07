@@ -6,8 +6,8 @@ function showPokemon(res) {
   document.body.appendChild(img);
 }
 
-function showError() {
-  console.log(`Request failed.`);
+function showError(e) {
+  console.log(`Request failed: ${e}`);
 }
 
 $.getJSON({

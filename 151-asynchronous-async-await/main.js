@@ -7,7 +7,7 @@ function showPokemon(res) {
 }
 
 function showError(e) {
-  console.log(`Request failed ${e}`);
+  console.log(`Request failed: ${e}`);
 }
 
 async function getPokemon(id) {
