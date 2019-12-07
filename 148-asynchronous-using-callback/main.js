@@ -31,3 +31,9 @@ $.getJSON({
   },
   error: showError
 });
+
+// callback hell 回调地狱
+// nesting 嵌套
+// inversion of control 控制翻转：很难控制回调函数的是否执行、何时执行、信任问题
+// not reasonable 不易分析
+// error handling is hard 错误处理很难
