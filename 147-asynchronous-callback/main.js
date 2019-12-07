@@ -10,15 +10,12 @@
 // 异步的一般表述：先···再运行
 // 事件循环中的设定：调用栈全部清空之后，如果任务队列还有未执行的任务，则把队列中的任务传回调用栈执行
 // Web API -> task queue 任务队列 -> call stack 调用栈
-function asyncLog() {
-  setTimeout(() => {
-    // 独立于主线程的执行顺序
-    console.log('I go eventually.');
-  }, 0);
-}
+setTimeout(() => {
+  // 独立于主线程的执行顺序
+  console.log('I go eventually.');
+}, 0);
 
 console.log('I go first.');
-asyncLog();
 console.log('I go next.');
 
 // function showPokemon(res) {
