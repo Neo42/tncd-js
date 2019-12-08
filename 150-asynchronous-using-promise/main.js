@@ -37,7 +37,8 @@ Promise.allSettled([getPokemon(1), getPokemon('a'), getPokemon(25)]).then(
       }
     })
 );
-// Resquest failed 只要其中一个 promise 有 reject, 那么忽略其他 resolve 的 promise 并抛出异常
+// rejected: Response error! Not Found.
+// 正常显示 resolved 的 promise ，并对 rejected 的 promise 进行规定的程序
 
 Promise.race([getPokemon(1), getPokemon(7), getPokemon(25)])
   .then(showPokemon)
