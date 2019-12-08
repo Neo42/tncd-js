@@ -43,3 +43,21 @@ Promise.allSettled([getPokemon(1), getPokemon('a'), getPokemon(25)]).then(
 Promise.race([getPokemon(1), getPokemon(7), getPokemon(25)])
   .then(showPokemon)
   .catch(showError);
+
+let resolvedVal = new Promise(resolve => resolve(1));
+console.log(resolvedVal);
+resolvedVal = Promise.resolve(1);
+console.log(resolvedVal);
+// Promise {<resolved>: 1}
+// __proto__: Promise
+// [[PromiseStatus]]: "resolved"
+// [[PromiseValue]]: 1
+
+let rejectedVal = new Promise((resolve, reject) => reject(1));
+console.log(rejectedVal);
+rejectedVal = Promise.reject(1);
+console.log(rejectedVal);
+// Promise {<rejected>: 1}
+// __proto__: Promise
+// [[PromiseStatus]]: "rejected"
+// [[PromiseValue]]: 1
