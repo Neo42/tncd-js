@@ -21,9 +21,23 @@ function getPokemon(id) {
   });
 }
 
-Promise.all([getPokemon(1), getPokemon(7), getPokemon(25)])
-  .then(pokemons => pokemons.forEach(showPokemon))
-  .catch(showError);
+// Promise.all([getPokemon(1), getPokemon('a'), getPokemon(25)])
+//   .then(pokemons => pokemons.forEach(showPokemon))
+//   .catch(showError); // Resquest failed 只要其中一个 promise 有 reject, 那么忽略其他 resolve 的 promise 并抛出异常
+
+Promise.allSettled([getPokemon(1), getPokemon('a'), getPokemon(25)]).then(
+  pokemons =>
+    pokemons.forEach(pokemon => {
+      if (pokemon.status === 'fulfilled') {
+        showPokemon(pokemon.value);
+      } else {
+        console.error(
+          `${pokemon.status}: Response ${pokemon.reason.statusText}! ${pokemon.reason.responseText}.`
+        );
+      }
+    })
+);
+// Resquest failed 只要其中一个 promise 有 reject, 那么忽略其他 resolve 的 promise 并抛出异常
 
 Promise.race([getPokemon(1), getPokemon(7), getPokemon(25)])
   .then(showPokemon)
