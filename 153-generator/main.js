@@ -29,7 +29,7 @@ let valGenerator = geneFunc();
 //   console.log(value);
 // } // 不会输出任何值,因为 done: true
 
-console.log(valGenerator.next().value); // 1 启动 generator, value 取值为第一个被 yield 出的值
-console.log(valGenerator.next(4).value); // 2 传入 value = 4, value 取值为第二个被 yield 出的值
-console.log(valGenerator.next(6).value); // 3 传入 value = 6, value 取值为第三个被 yield 出的值
-console.log(valGenerator.next(8).value); // undefined 传入 value = 8
+console.log(valGenerator.next().value); // 1 ，启动 generator, value 取值为第一个被 yield 出的值
+console.log(valGenerator.next(4).value); // 2 ，传入 value = 4, value 取值为第二个被 yield 出的值
+console.log(valGenerator.next(6).value); // 3 ，传入 value = 6, value 取值为第三个被 yield 出的值
+console.log(valGenerator.next(8).value); // undefined ， 传入 value = 8，value 取值为 generator close 后的 value：undefined
