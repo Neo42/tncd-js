@@ -2,7 +2,10 @@
 
 // import * as imported from './script.js';
 import('./script.js')
-  .then(console.log) // Module {Symbol(Symbol.toStringTag): "Module"}
+  .then(mod => {
+    console.log(mod); // Module {Symbol(Symbol.toStringTag): "Module"}
+    return mod;
+  })
   .then(mod => {
     mod.log(); // logging
     mod.scream(); // ahhhhhh
