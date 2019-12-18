@@ -1,5 +1,5 @@
-function showPokemon(json) {
-  let imgUrl = json.sprites.front_default;
+function showPokemon(res) {
+  let imgUrl = res.sprites.front_default;
   let img = document.createElement('img');
   img.height = 300;
   img.src = imgUrl;
@@ -7,19 +7,23 @@ function showPokemon(json) {
 }
 
 function showError(e) {
-  console.log(`Request failed ${e}`);
+  console.log(`Request failed: ${e}`);
 }
 
 async function getPokemon(id) {
   /*return new Promise((resolve, reject) => {})*/
   try {
-    let pokemon = await new Promise(resolve => {
+    let pokemon = new Promise(resolve => {
       $.getJSON({
         url: `https://pokeapi.co/api/v2/pokemon/${id}/`,
         success: resolve
       });
     });
-    showPokemon(pokemon);
+    {
+      // 相当于 resolve
+      console.log(pokemon);
+      // showPokemon(pokemon);
+    }
   } catch (e) {
     showError(e);
   }

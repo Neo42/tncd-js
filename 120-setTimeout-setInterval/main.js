@@ -11,7 +11,10 @@ timeoutId = setInterval(() => {
 
 setTimeout(() => clearInterval(timeoutId), 7000);
 
-// 间隔设为零的 setTimeout 还是会后运行（异步）
+// 间隔设为零的 setTimeout 还是会后运行
+// 事件循环中的设定：调用栈全部清空之后，如果任务队列还有未执行的任务，则把队列中的任务传回调用栈执行
+// Web API -> task queue 任务队列 -> call stack 调用栈
+
 setTimeout(() => {
   console.log('Hello');
 }, 0);
