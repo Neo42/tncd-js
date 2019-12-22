@@ -1,5 +1,6 @@
 console.log(document.querySelector('ul').childNodes); // NodeList(7) [text, li, text, li, text, li, text]
 
+// DOM集合：只读、实时、不可 for...in 循环
 for (let i = 0; i < document.body.childNodes.length; i++) {
   console.log(`The ${i + 1}th child node: ${document.body.childNodes[i]}`);
 }
