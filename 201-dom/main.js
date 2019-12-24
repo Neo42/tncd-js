@@ -28,11 +28,19 @@ console.log(
     .nextElementSibling
 );
 
-console.log(table.rows);
-let cap = table.createCaption();
-cap.innerHTML = '<b>YOLO</b>';
+console.log(table.rows); // HTMLCollection(2) [tr, tr] 所有行元素的集合
+let cap = table.createCaption(); // 添加说明
+cap.innerHTML = '<b>YOLO</b>'; // 添加说明文字
 console.log(table.caption); // <caption><b>YOLO</b></caption>
-table.rows[0].cells[1].style.color = '#66bfbf';
-table.tBodies[0].style.backgroundColor = '#eaf6f6';
+table.rows[0].cells[1].style.color = '#faf9f9';
+console.log(table.tBodies); // // HTMLCollection[tbody]
+table.tBodies[0].style.backgroundColor = '#add2c9';
+console.log(table.rows[0].sectionRowIndex); // 0 行元素索引数
+console.log(table.rows[1].sectionRowIndex); // 1
+let thead = table.createTHead();
+thead.innerText = 'Head';
+let tfoot = table.createTFoot();
+tfoot.innerText = 'Foot';
+console.log(table.tHead, table.tFoot); // <thead>Head</thead> <tfoot>Foot</tfoot>
 
 // table.tBodies.style.backgroundColor = '#d6e5fa';
