@@ -27,3 +27,12 @@ console.log(
   document.body.firstElementChild.nextElementSibling.firstElementChild
     .nextElementSibling
 );
+
+console.log(table.rows);
+let cap = table.createCaption();
+cap.innerHTML = '<b>YOLO</b>';
+console.log(table.caption); // <caption><b>YOLO</b></caption>
+table.rows[0].cells[1].style.color = '#66bfbf';
+table.tBodies[0].style.backgroundColor = '#eaf6f6';
+
+// table.tBodies.style.backgroundColor = '#d6e5fa';
