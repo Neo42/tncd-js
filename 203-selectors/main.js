@@ -13,3 +13,6 @@ for (const elem of document.body.children) {
     console.log(elem); // <ul id="users">...</ul>
   }
 }
+
+console.log(document.querySelector('#user-1').closest('#users')); // <ul id="users">...</ul>
+console.log(document.querySelector('#user-1').closest('#')); // <ul id="users">...</ul>
