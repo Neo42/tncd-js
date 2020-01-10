@@ -4,8 +4,8 @@ let p = document.body.firstChild;
 console.log(p.nodeName, p.tagName, p.nodeType); // #text undefined 3
 
 console.log(ele.innerHTML, `\n`, ele.innerText);
-//     Blah
-//     <script src="./main.js"></script>
+//  Blah
+//  <script src="./main.js"></script>
 //  Blah
 
 // ele.innerHTML = 'New body';
