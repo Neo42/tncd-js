@@ -29,6 +29,9 @@ let name = prompt("What's your name?", "<b>I should't be bold.</b>");
 message.innerHTML = name; // 插入 html
 message.textContent = name; // 插入纯文本
 
-setTimeout(() => (hidden.hidden = !hidden.hidden), 5000); //  5秒后切换 #hidden 的隐藏属性
+setTimeout(() => (hidden.hidden = !hidden.hidden), 2000); //  5秒后切换 #hidden 的隐藏属性
 
-input.value = 'Solid input value.'; // 在输入框中填充值
+input.value = 'Magical input value.'; // 在输入框中填充文本值 等同于在 html 标签中插入 input 属性
+// 相应地可以这样使用
+console.log(input.type); // text
+console.log(input.id); // input
