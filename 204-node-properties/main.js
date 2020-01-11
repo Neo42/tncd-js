@@ -26,7 +26,9 @@ console.log(p.nodeValue, p.data); // Blah Blah
 console.log(p.nextSibling.data); // comment
 
 let name = prompt("What's your name?", "<b>I should't be bold.</b>");
-txt.innerHTML = name; // 插入 html
-txt.textContent = name; // 插入纯文本
+message.innerHTML = name; // 插入 html
+message.textContent = name; // 插入纯文本
 
 setTimeout(() => (hidden.hidden = !hidden.hidden), 5000); //  5秒后切换 #hidden 的隐藏属性
+
+input.value = 'Solid input value.'; // 在输入框中填充值
