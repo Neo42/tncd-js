@@ -35,3 +35,5 @@ input.value = 'Magical input value.'; // 在输入框中填充文本值 等同�
 // 相应地可以这样使用
 console.log(input.type); // text
 console.log(input.id); // input
+
+twitter.href = 'https://twitter.com/neo42me'; // 给 a 标签加上 href 属性
