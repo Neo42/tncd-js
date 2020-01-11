@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <style>
+      #msg[data-customized='bruh'] {
+        color: thistle;
+      }
+      #msg[data-customized='dude'] {
+        color: dimgrey;
+      }
+    </style>
+    <p>Here is the message:</p>
+    <div id="msg"></div>
+    <div>Fancy input: <input type="text" id="input" /></div>
+    <div id="msg" data-customized="bruh">Nice customized data.</div>
+    <script src="./main.js"></script>
+  </body>
+</html>
