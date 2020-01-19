@@ -21,4 +21,6 @@ console.log(input.getAttribute('value')); // null, value特性值不能通过特
 input.setAttribute('type', 'checkbox');
 input.setAttribute('checked', true);
 
-msg[1].dataset.customized = 'dude';
+setTimeout(() => {
+  msg[1].dataset.customized = 'dude';
+}, 2000);
