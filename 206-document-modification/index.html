@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <style>
+      .alert {
+        padding: 15px;
+        border: 3px solid #a1b8c7;
+        border-radius: 4px;
+        color: #a1e9ff;
+        background-color: #593eec;
+        width: 50%;
+        text-align: center;
+      }
+    </style>
+    <div class="alert">
+      <strong>Hi there!</strong> You're reading an important message.
+    </div>
+    <ol class="elem">
+      <li>Hello</li>
+      <li>World</li>
+    </ol>
+
+    <div id="elem1"></div>
+    <div id="elem2"></div>
+    <div id="elem3"></div>
+    <script>
+      let text = '<b>text</b>';
+      elem1.append(document.createTextNode(text));
+      elem2.innerHTML = text;
+      elem3.textContent = text;
+    </script>
+
+    <ul id="user"></ul>
+    <script src="./main.js"></script>
+  </body>
+</html>
