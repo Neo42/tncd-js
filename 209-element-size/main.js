@@ -16,4 +16,9 @@ console.log(example.clientHeight); // 240 = 200 + 20 * 2
 // clientHeight = contentWidth + padding * 2
 console.log(example.clientWidth); // 340 = 300 + 20 * 2
 console.log(example.scrollHeight); // 590
-example.style.height = `${example.scrollHeight}px`;
+// example.style.height = `${example.scrollHeight}px`;
+
+// Not read only
+example.scrollTop += 300;
+// example.scrollLeft += 300;
+console.log(example.scrollTop);
